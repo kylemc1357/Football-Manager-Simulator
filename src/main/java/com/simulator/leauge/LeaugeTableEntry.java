@@ -6,8 +6,25 @@ public class LeaugeTableEntry {
     private int wins;
     private int draws;
     private int losses;
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
     private int points;
     private int goalDifference;
+
+    public int getGamesPlayed() {
+        return gamesPlayed;
+    }
+
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
+    }
 
     public LeaugeTableEntry(Club club){
         this.club = club;

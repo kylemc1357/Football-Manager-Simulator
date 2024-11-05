@@ -9,6 +9,23 @@ import java.util.Map;
 
 public class LeaugeTable {
     private Map<Club, LeaugeTableEntry> leaugeTable; //for quick lookup times
+
+    public Map<Club, LeaugeTableEntry> getLeaugeTable() {
+        return leaugeTable;
+    }
+
+    public void setLeaugeTable(Map<Club, LeaugeTableEntry> leaugeTable) {
+        this.leaugeTable = leaugeTable;
+    }
+
+    public List<LeaugeTableEntry> getTableEntries() {
+        return tableEntries;
+    }
+
+    public void setTableEntries(List<LeaugeTableEntry> tableEntries) {
+        this.tableEntries = tableEntries;
+    }
+
     private List<LeaugeTableEntry> tableEntries; //for quick sorting the whole table
 
     public LeaugeTableEntry getSpecificEntry(Club club){

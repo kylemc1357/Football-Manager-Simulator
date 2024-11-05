@@ -9,6 +9,11 @@ import java.util.List;
 public class Club {
     private String name;
     private List<Player> players;
+    private TeamStats teamStats;
+
+    public TeamStats getTeamStats() {
+        return teamStats;
+    }
 
     public Leauge getCurrentLeauge() {
         return currentLeauge;
@@ -39,9 +44,11 @@ public class Club {
     public Club(String name, List<Player> players){
         this.name = name;
         this.players = players;
+        this.teamStats = new TeamStats();
     }
     public Club(String name){
         this.name = name;
+        this.teamStats = new TeamStats();
     }
 
 

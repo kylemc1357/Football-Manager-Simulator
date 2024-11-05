@@ -31,6 +31,7 @@ public class Simulation
         test1.setClubs(clubs);
         test1.generateFixturesAndTable(simulation.simulationTimeContext);
         test1.runLeauge(simulation.simulationTimeContext);
+        test1.runLeauge(simulation.simulationTimeContext);
         System.out.println("works");
     }
 

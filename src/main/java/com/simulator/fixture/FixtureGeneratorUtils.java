@@ -1,32 +1,14 @@
 package com.simulator.fixture;
 
 import com.simulator.club.Club;
-import com.simulator.simulation.SimulationTimeContext;
 import com.simulator.week.GameWeek;
 
 import java.time.LocalDate;
 import java.util.*;
 
-public class FixtureGenerator {
+public class FixtureGeneratorUtils {
 
-    public FixtureGenerator(){
-    }
-
-    /*public List<GameWeek> generateFixtures(List<Club> clubs){
-        int length = clubs.size();
-    }*/
-
-    //for 18 team leauges
-    /*seen idea online to create one set by anchoring first element and matching up the mirror
-    (ie 0 -> end of list, 1 -> end of list -1) and after each loop move the rest of the list
-    down one
-
-    i understand this method for now dosent offer compete randomness over the season but will work for now
-     */
-
-    //this is functon to create the first set of fixtures, will create a function to generate the
-    //other half based on what this returns 
-    public List<GameWeek> generateRRHomeFixtures(List<Club> clubs, LocalDate date) { //will only ever get called with even number of teams, either 18 or 12 for now
+    public static List<GameWeek> generateRRHomeFixtures(List<Club> clubs, LocalDate date) { //will only ever get called with even number of teams, either 18 or 12 for now
         List<GameWeek> fixtures = new ArrayList<>();
         Collections.shuffle(clubs);
         int noOfClubs = clubs.size();
@@ -52,7 +34,9 @@ public class FixtureGenerator {
         }
         return fixtures;
     }
-    public List<GameWeek> generateSecondHalfFixtures(List<GameWeek> firstHalfFixtures, LocalDate startdate){
+
+    //this creates a 2nd set of fixtures based on the first set, just with the home and away teams reversed
+    public static List<GameWeek> generateSecondRoundFixtures(List<GameWeek> firstHalfFixtures, LocalDate startdate){
         List<GameWeek> secondHalfFixtures = new ArrayList<>();
         LocalDate weekDate = startdate; //get most recent date from last gameWeek
         int weekNo = firstHalfFixtures.size() +1;
@@ -71,7 +55,9 @@ public class FixtureGenerator {
         combinedFixtures.addAll(secondHalfFixtures);
         return combinedFixtures;
     };
-    public List<GameWeek> generateThirdRoundFixtures(List<GameWeek> firstTwoRoundFixtures, LocalDate startDate){ //for teams of 12 when they play each other 3 times
+
+    //this will create a 3rd set of fixtures based on the first two sets, just with the home and away teams reversed randomly
+    public static List<GameWeek> generateThirdRoundFixtures(List<GameWeek> firstTwoRoundFixtures, LocalDate startDate){ //for teams of 12 when they play each other 3 times
         int halfwayIndex = firstTwoRoundFixtures.size()/2;
         LocalDate weekDate = startDate;
         List<GameWeek> thirdRoundFixtures = new ArrayList<>();
@@ -91,23 +77,10 @@ public class FixtureGenerator {
         return combinedFixtures;
     }
 
-    public List<GameWeek> generateFixtureFor18TeamLeauge(List<Club> clubs, LocalDate startDate){
-        return generateSecondHalfFixtures(generateRRHomeFixtures(clubs, startDate), startDate.plusWeeks(clubs.size() - 1));
-
-    }
-    public List<GameWeek> generateFixtureFor12TeamLeauge(List<Club> clubs, LocalDate startDate){
-        return generateThirdRoundFixtures(generateSecondHalfFixtures(generateRRHomeFixtures(clubs, startDate), startDate.plusWeeks(clubs.size() - 1)), startDate.plusWeeks(2 * (clubs.size() - 1)));
-    }
-
-    public Date addWeekToDate(Date date){  //takes a date and returns a week after
+    public static Date addWeekToDate(Date date){  //takes a date and returns a week after
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         calendar.add(Calendar.WEEK_OF_YEAR, 1);
         return calendar.getTime();
     }
-
-    /*public GameWeek iterateOverGameWeekAndReturnGameWeekWithReversedFixtures(GameWeek previousGameWeek){
-
-    }*/
-
 }

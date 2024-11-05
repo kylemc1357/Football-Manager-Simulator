@@ -5,22 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34c62a22-45d0-4d6d-881e-c3bf1f909a93" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/club/Club.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/country/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/entity/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/Fixture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/Leauge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTableEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/simulation/SimulationTimeContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/week/GameWeek.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/simulator/fixture/FixtureGeneratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/simulator/simulation/SimulationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/club/TeamStats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGenerator12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGenerator18.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGeneratorFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/IFixtureGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeagueSimulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simulator/fixture/FixtureGeneratorFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/simulator/fixture/FixtureGeneratorUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/simulation/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/club/Club.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/club/Club.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/Fixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/Fixture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/fixture/FixtureGeneratorUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/Leauge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/Leauge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTableEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/leauge/LeaugeTableEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/simulator/simulation/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/simulator/simulation/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/simulator/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/simulator/fixture/FixtureGeneratorTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -64,7 +68,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -75,20 +79,7 @@
       <recent name="com.simulator.fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.com.simulator.simulation.Simulation">
-    <configuration name="Simulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="simulator.Simulation" />
-      <module name="Football-Manager-Simulator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="simulator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.com.simulator in Football-Manager-Simulator">
     <configuration name="com.simulator.simulation.Simulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.simulator.simulation.Simulation" />
       <module name="Football-Manager-Simulator" />
@@ -102,7 +93,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FixtureGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FixtureGeneratorFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Football-Manager-Simulator" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +102,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.simulator.fixture" />
-      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorTest" />
+      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorFactoryTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FixtureGeneratorTest.testGenerateRRHomeFixtures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FixtureGeneratorUtilsTest.testGenerateSecondHalfFixtures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Football-Manager-Simulator" />
       <extension name="coverage">
         <pattern>
@@ -126,36 +117,50 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.simulator.fixture" />
-      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorTest" />
-      <option name="METHOD_NAME" value="testGenerateRRHomeFixtures" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FixtureGeneratorTest.testGenerateSecondHalfFixtures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Football-Manager-Simulator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.simulator.fixture.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.simulator.fixture" />
-      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorTest" />
+      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorUtilsTest" />
       <option name="METHOD_NAME" value="testGenerateSecondHalfFixtures" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FixtureGeneratorUtilsTest.testGenerateThirdRoundFixtures" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Football-Manager-Simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simulator.fixture.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simulator.fixture" />
+      <option name="MAIN_CLASS_NAME" value="com.simulator.fixture.FixtureGeneratorUtilsTest" />
+      <option name="METHOD_NAME" value="testGenerateThirdRoundFixtures" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.simulator in Football-Manager-Simulator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Football-Manager-Simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.simulator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.simulator" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.simulator in Football-Manager-Simulator" />
         <item itemvalue="Application.com.simulator.simulation.Simulation" />
-        <item itemvalue="JUnit.FixtureGeneratorTest" />
-        <item itemvalue="JUnit.FixtureGeneratorTest.testGenerateRRHomeFixtures" />
-        <item itemvalue="JUnit.FixtureGeneratorTest.testGenerateSecondHalfFixtures" />
-        <item itemvalue="Application.Simulation" />
+        <item itemvalue="JUnit.FixtureGeneratorFactoryTest" />
+        <item itemvalue="JUnit.FixtureGeneratorUtilsTest.testGenerateThirdRoundFixtures" />
+        <item itemvalue="JUnit.FixtureGeneratorUtilsTest.testGenerateSecondHalfFixtures" />
       </list>
     </recent_temporary>
   </component>

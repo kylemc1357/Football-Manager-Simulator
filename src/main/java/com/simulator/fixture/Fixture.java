@@ -4,6 +4,8 @@ import com.simulator.club.Club;
 public class Fixture {
     private Club homeTeam;
     private Club awayTeam;
+    //add weather, ground, capacity etc
+
     public Fixture(Club homeTeam, Club awayTeam){
         this.homeTeam = homeTeam;
         this.awayTeam = awayTeam;
